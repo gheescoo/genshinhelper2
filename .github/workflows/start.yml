@@ -13,10 +13,7 @@ jobs:
         env: 
           COOKIE: ${{secrets.COOKIE}}
         run: |
-          pip install genshinhelper
-          python3
-          import genshinhelper as gh
-          cookie = COOKIE
-          g = gh.Genshin(cookie)
-          roles = g.roles_info
-          print(roles)
+          docker pull yindan/genshinhelper
+          docker run -d --name=genshinhelper \
+          -e COOKIE_HOYOLAB = COOKIE \
+          --restart always yindan/genshinhelper:latest
