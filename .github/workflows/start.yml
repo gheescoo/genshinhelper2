@@ -9,13 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
-
       - name: genshin-sign
         env: 
           COOKIE: ${{secrets.COOKIE}}
-          SENDKEY: ${{secrets.SENDKEY}}
         run: |
-          pip install g
-
-ih
+          apt update
+          apt install python3
+          pip install genshinhelper
+          python -m genshinhelper
