@@ -13,7 +13,10 @@ jobs:
         env: 
           COOKIE: ${{secrets.COOKIE}}
         run: |
-          apt update
-          apt install python3
           pip install genshinhelper
-          python -m genshinhelper
+          python3
+          import genshinhelper as gh
+          cookie = COOKIE
+          g = gh.Genshin(cookie)
+          roles = g.roles_info
+          print(roles)
