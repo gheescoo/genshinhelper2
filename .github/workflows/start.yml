@@ -1,0 +1,21 @@
+name: O My Genshin
+
+on:
+  push:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+
+      - name: genshin-sign
+        env: 
+          COOKIE: ${{secrets.COOKIE}}
+          SENDKEY: ${{secrets.SENDKEY}}
+        run: |
+          pip install g
+
+ih
