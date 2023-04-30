@@ -15,5 +15,4 @@ jobs:
         run: |
           docker pull yindan/genshinhelper
           docker run -d --name=genshinhelper \
-          -e COOKIE_HOYOLAB = COOKIE \
-          --restart always yindan/genshinhelper:latest
+          -e COOKIE_HOYOLAB = COOKIE
