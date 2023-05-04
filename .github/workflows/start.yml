@@ -14,4 +14,4 @@ jobs:
           COOKIE: ${{secrets.COOKIE}}
         run: |
           docker pull yindan/genshinhelper
-          docker run genshinhelper -e COOKIE_HOYOLAB = COOKIE
+          docker run yindan/genshinhelper -e COOKIE_HOYOLAB = COOKIE
